@@ -4,7 +4,7 @@
 #include "imgui_impl_android.h"
 
 using initializeMotionEvent_ = int(*)(void*, void*, void*);
-initializeMotionEvent_ o_initializeMotionEvent = nullptr;
+static initializeMotionEvent_ o_initializeMotionEvent = nullptr;
 int f_initializeMotionEvent(void *inputConsumer, void *motionEvent, void *inputMessage) {
     int result = o_initializeMotionEvent(inputConsumer, motionEvent, inputMessage);
     auto* event = (AInputEvent*)inputConsumer;
@@ -23,3 +23,4 @@ void Input::Init() {
 
 
 }
+
