@@ -3,8 +3,8 @@
 #include <shadowhook.h>
 #include <EGL/egl.h>
 #include <GLES3/gl3.h>
-#include "ImGui/imgui_impl_android.h"
-#include "ImGui/imgui_impl_opengl3.h"
+#include "imgui_impl_android.h"
+#include "imgui_impl_opengl3.h"
 
 
 //ImGui_ImplAndroid_NewFrame override
@@ -100,3 +100,4 @@ void EGL::Init() {
     shadowhook_hook_sym_name("libEGL.so", "eglSwapBuffers",(void*)f_eglSwapBuffers,(void**)&o_eglSwapBuffers);
 
 }
+
