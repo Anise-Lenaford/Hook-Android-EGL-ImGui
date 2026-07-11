@@ -11,9 +11,9 @@ int f_AInputQueue_preDispatchEvent(void *inputQueue, void *motionEvent) {
     if (motionEvent != nullptr) {
         ImGui_ImplAndroid_HandleInputEvent(reinterpret_cast<AInputEvent*>(motionEvent));
 
-        ImGuiIO& io = ImGui::GetIO();
-        float wheel = io.MouseDelta.y;
-        io.MouseWheel = wheel * 0.01f;
+        // ImGuiIO& io = ImGui::GetIO();
+        // float wheel = io.MouseDelta.y;
+        // io.MouseWheel = wheel * 0.01f;
     }
 
     return result;
