@@ -73,10 +73,6 @@ EGLBoolean f_eglSwapBuffers(EGLDisplay display, EGLSurface surface)
             //UI::Init();
         }
 
-        ImGuiIO &io = ImGui::GetIO();
-        float scale = (float)EGL::eglWidth / (float)EGL::eglHeight;
-        io.FontGlobalScale = scale * 1.5f;
-
         ImGui_ImplAndroid_Init(nullptr);
         ImGui_ImplOpenGL3_Init("#version 300 es");
 
